@@ -1,0 +1,42 @@
+a {
+	@apply underline;
+}
+
+* {
+	@apply transition;
+}
+
+html {
+	@apply min-h-100svh;
+}
+
+html,
+body,
+#app {
+	@apply flex w-full items-stretch justify-stretch min-h-100svh text-dark-600 overscroll-y-none scroll-smooth;
+	line-height: 1.3;
+	font-family: "Commissioner", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+	direction: ltr;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.info {
+	@apply text-base prose prose-light;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}

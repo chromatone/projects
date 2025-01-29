@@ -1,0 +1,25 @@
+{
+	"id": "chromatone-projects",
+	"name": "Chromatone Projects",
+	"short_name": "Projects",
+	"description": "Chromatone enterprises and experiments",
+	"start_url": "/",
+	"background_color": "#444",
+	"theme_color": "#444",
+	"display": "standalone",
+	"orientation": "any",
+	"display_override": ["window-controls-overlay", "minimal-ui", "standalone"],
+	"handle_links": "preferred",
+	"prefer_related_applications": false,
+	"categories": [
+		"projects",
+		"creative projects",
+		"multimedia production",
+		"multimedia education",
+		"chromatone"
+	],
+
+	"launch_handler": {
+		"client_mode": ["focus-existing", "auto"]
+	}
+}
