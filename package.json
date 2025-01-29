@@ -20,6 +20,7 @@
 		"@iconify-json/la": "^1.2.1",
 		"@unocss/extractor-pug": "^65.4.3",
 		"@vue/language-plugin-pug": "^2.2.0",
+		"image-downloader": "^4.3.0",
 		"pug": "^3.0.3",
 		"unocss": "^65.4.3",
 		"vitepress": "^1.6.3"

@@ -1,5 +1,7 @@
 .vitepress/cache
 
+public/cover
+
 database
 # Logs
 logs

@@ -3,20 +3,14 @@ import { useData } from 'vitepress'
 
 import { ref } from 'vue';
 
-
 const { frontmatter: f } = useData()
-
-
-
 </script>
 
 
 <template lang="pug">
-.flex.flex-wrap.items-stretch.w-full.justify-stretch.relative HELLO
+.flex.flex-wrap.items-stretch.w-full.justify-stretch.relative
+  content(:class="{ prose: f?.dynamic }")
 
-  content.prose.max-w-unset.content.bg-light-300.z-10(style="flex: 1 1 100%")
-
-  
 </template>
 
 <style lang="postcss">
@@ -25,8 +19,10 @@ const { frontmatter: f } = useData()
 .prose h2,
 .prose h3 {
   @apply m-4;
-  max-width: 55ch;
+}
 
+@view-transition {
+  navigation: auto;
 }
 
 .custom-block-title {
