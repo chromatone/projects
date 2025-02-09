@@ -1,5 +1,7 @@
 <script setup>
+import { format } from 'date-fns';
 import { data } from './projects.data'
+
 
 </script>
 
@@ -8,7 +10,7 @@ import { data } from './projects.data'
   .font-bold Projects
   .op-80 {{ data.length }}
 slot 
-.flex.flex-wrap.gap-4.p-4
+.flex.flex-wrap.gap-4.p-4.items-start
   a.items-stretch.bg-light-800.dark-bg-dark-200.no-underline.rounded.overflow-hidden.shadow.hover-brightness-110.flex.flex-wrap(
     style="flex: 1 1 400px"
     :href="`/${project?.slug}/`"
@@ -16,10 +18,10 @@ slot
     ) 
     .p-0(style="flex: 1 1 180px")
       img( :src="`/cover/${project?.slug}.webp`")
-    .flex.flex-col.gap-2.p-4(style="flex: 1 1 250px")
+    .flex.flex-col.gap-2.p-4(style="flex: 50 1 200px")
       .p-0.flex.flex-col.gap-2
         .text-sm.flex.flex-wrap.gap-1
-          .op-60 {{ project?.start_date }} − {{ project?.end_date || 'Present' }}
+          .op-60 {{ format(project?.start_date, 'dd MMM yyyy') }} − {{ project?.end_date ? format(project?.end_date, 'dd MMM yyyy') : 'Present' }}
           .flex-1
 
         .text-2xl.font-bold {{ project?.title }}
