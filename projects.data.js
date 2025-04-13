@@ -10,7 +10,7 @@ export default {
         .with(rest())
         .request(readItems('projects', {
           sort: '-start_date',
-          fields: ['*', 'title', 'description', 'start_date', 'end_date', 'field', 'program.title', 'cover.id']
+          fields: ['*', 'title', 'description', 'start_date', 'end_date', 'field', 'program.title', 'cover.id', 'updates.*']
         }))
     } catch (e) {
       console.log('Projects fetch failed')

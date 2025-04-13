@@ -14,8 +14,13 @@ const { params } = useData()
   .flex-1.p-4.text-lg.flex.flex-col.gap-2
     .text-4xl {{ $params?.title }}
     .p-0 {{ $params?.description }}
-
-
-
+  .flex.flex-wrap.gap-2.p-4(v-if="$params.updates.length")
+    .p-8.text-4xl.leading-loose(style="flex: 1 1 150px") Project Updates
+    .rounded-lg.shadow.overflow-hidden.flex.flex-col.gap-1.bg-light-100.dark-bg-dark-100(v-for="update in $params.updates" :key="update.id" style="flex: 1 1 200px") 
+      img(v-if="update.cover" :src="`https://db.chromatone.center/assets/${update.cover.id}?width=400`")
+      .p-2.flex.flex-col.gap-1
+        .text-xs {{ update?.date }}
+        .text-md {{ update?.title }}
+        .text-sm {{ update?.description }}
   
 </template>

@@ -6,7 +6,7 @@ export default {
 
     try {
       projects = await createDirectus('https://db.chromatone.center/').with(staticToken('HDqt6uvSbGyYnL4tdi3jntEHOj7i_aYp')).with(rest()).request(readItems('projects', {
-        fields: ['*', 'cover.id', 'program.title']
+        fields: ['*', 'cover.id', 'program.title', 'updates.*', 'updates.cover.*']
       }))
     } catch (e) {
       console.log('Projects paths not loaded', e)
