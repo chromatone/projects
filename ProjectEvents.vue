@@ -3,7 +3,7 @@ import { createDirectus, rest, readItems, staticToken } from '@directus/sdk'
 import { computed, onMounted, ref } from 'vue';
 import { useDateFormat } from '@vueuse/core';
 import { useRoute } from 'vitepress';
-import YoutubeEmbed from '.vitepress/YoutubeEmbed.vue';
+import YoutubeEmbed from './.vitepress/YoutubeEmbed.vue';
 
 const props = defineProps({
   id: { type: String, default: '' }

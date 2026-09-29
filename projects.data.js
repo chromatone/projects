@@ -1,5 +1,5 @@
 import { createDirectus, rest, readItems, staticToken } from '@directus/sdk'
-import { downloadCovers } from './.vitepress/downloadCovers'
+import { downloadCovers } from './.vitepress/downloadCovers.js'
 
 export default {
   async load() {
